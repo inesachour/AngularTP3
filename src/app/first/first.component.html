@@ -1,1 +1,24 @@
-<p>first works!</p>
+<div class="form-group m-5">
+
+  <p [ngStyle]="{'color': color,  'font-family': family, 'font-size': size+'px'}">Text</p>
+
+  <div class="row">
+    <label class="col-sm">Text Color</label>
+    <label class="col-sm">Font Size</label>
+    <label class="col-sm">Font Family</label>
+  </div>
+
+  <div class="row">
+    <input type="color" class="form-control col-sm m-1" [(ngModel)]="color">
+    <input type="number" class="form-control col-sm m-1" [(ngModel)]="size">
+    <select  class="form-control col-sm m-1" [(ngModel)]="family">
+      <option selected>Arial</option>
+      <option>Georgia</option>
+      <option>Emoji</option>
+      <option>Fantasy</option>
+    </select>
+  </div>
+
+
+</div>
+

@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FirstComponent implements OnInit {
 
+  color : string = '#000000';
+  size : number = 16;
+  family : string = 'Arial';
+
   constructor() { }
 
   ngOnInit(): void {

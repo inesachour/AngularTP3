@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SecondComponent implements OnInit {
 
+  color: string = "lightGreen";
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  colorChange(color : string){
+    this.color = color;
+  }
+
+  defaultColor(){
+    this.color = "lightGreen"
+  }
+
 
 }
