@@ -29,7 +29,7 @@ export class CvService {
   }
 
   getCvById(id : number) : Cv {
-    return this.cvs.find(cv => cv.id == id)!!; //TODO
+    return this.cvs.find(cv => cv.id == id)!!;
   }
 
   deleteCv(id:number){

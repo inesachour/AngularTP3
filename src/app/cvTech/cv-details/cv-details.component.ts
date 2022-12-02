@@ -10,13 +10,12 @@ import {Cv} from "../model/cv";
 })
 export class CvDetailsComponent implements OnInit {
 
-  id : number = -1 //TODO
-  cv : Cv;
+  cv! : Cv;
 
   constructor(private activatedRouter:ActivatedRoute,private router: Router, private cvService : CvService) {
-    activatedRouter.params.subscribe(params => { this.id = params['id']});
-    console.log(this.id)
-    this.cv = this.cvService.getCvById(this.id);
+    activatedRouter.params.subscribe(params => {
+      this.cv = this.cvService.getCvById(params['id']);
+    });
   }
 
   ngOnInit(): void {
