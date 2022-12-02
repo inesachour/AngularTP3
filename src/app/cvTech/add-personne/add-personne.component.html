@@ -1,0 +1,27 @@
+<form class="py-2 px-5" #loginForm="ngForm">
+  <div class="form-group">
+    <label>Name</label>
+    <input required type="text" class="form-control" ngModel name="name">
+  </div>
+  <div class="form-group">
+    <label>First Name</label>
+    <input required type="text" class="form-control" ngModel name="firstName">
+  </div>
+  <div class="form-group">
+    <label>Age</label>
+    <input required type="number" class="form-control" ngModel name="age">
+  </div>
+  <div class="form-group">
+    <label>CIN</label>
+    <input required type="number" class="form-control" ngModel name="cin">
+  </div>
+  <div class="form-group">
+    <label>Job</label>
+    <input required type="text" class="form-control" ngModel name="job">
+  </div>
+  <div class="form-group">
+    <label>Path</label>
+    <input required type="text" class="form-control" ngModel name="path">
+  </div>
+  <button class="btn btn-primary mt-2" [disabled]="loginForm.invalid" (click)="onSubmit(loginForm)">Submit</button>
+</form>
